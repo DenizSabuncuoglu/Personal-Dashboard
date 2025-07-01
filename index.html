@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Personal DashBoard</title>
+</head>
+<body>
+    <div class="navbar">
+        <h1>My Personal DashBoard</h1>
+    </div>
+
+    <div class="welcome-page">
+        <h1>Welcome Deniz!</h1>
+    </div>
+
+    <div class="time">
+        <div class="container">
+            <h1>THE TIME IS</h1>
+            <div class="clock">
+                
+                <span id="hrs">00</span>
+                <span>:</span>
+                <span id="min">00</span>
+                <span>:</span>
+                <span id="sec">00</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="weather-section">
+        <div class="weather">
+            <div class="weather-details">
+            <h2>Today's weather is</h2>
+            <h1 class="temp">22°C</h1>
+            <h2 class="city"></h2>
+            <div class="details">
+                <p class="humidity">50% Humidity</p>
+                <p class="wind">15 km/h Wind Speed</p>
+            </div>
+        </div>
+        <img src="Media/rain.png" class="weather-icon">
+    </div>
+    </div>
+
+    <div class="to-do-section">
+        <div class="todo-app">
+            <h2>Your Tasks For Today <img src="Media/icon.png"></h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your text">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="list-container">
+                <!--<li class="checked">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li>-->
+            </ul>
+        </div>
+    </div>
+
+    <div class="quote-section">
+        <div class="quote-box">
+            <h2>Quote Of The Day</h2>
+            <blockquote id="quote">Loading...</blockquote>
+            <span id="author">Loading...</span>
+            <div>
+                <button onclick="getquote(api_url)" class="newBtn">New Quote</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

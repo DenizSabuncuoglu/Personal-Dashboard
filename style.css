@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tagesschrift&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    transition: background-color 0.5s ease;
+    background: url(Media/background.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  .time,
+  .weather-section,
+  .to-do-section,
+  .quote-section {
+    padding-top: 100px; /* Or more, to offset the navbar */
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.navbar{
+    background-color: #173F5F;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #edeef0;
+    position: fixed;
+    z-index: 3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.welcome-page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.welcome-page h1 {
+    font-size: 100px;
+}
+
+.time{
+
+    width: 100%;
+    height: 50vh;
+    color: #fff;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: -50px;
+}
+
+.time h1{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 60px;
+    margin-top: -60px;
+}
+
+.container{
+    width: 800px;
+    height: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.clock{
+    width: 100%;
+    height: 100%;
+    background: rgba(60, 63, 211, 0.17);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4.5px);
+-webkit-backdrop-filter: blur(4.5px);
+border: 1px solid rgba(255, 255, 255, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.clock span{
+    font-size: 150px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    margin-top: -50px;
+}
+.clock span::after{
+    font-size: 16px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#hrs::after{
+    content: 'HOURS';
+}
+#min::after{
+    content: 'MINUTES';
+}
+#sec::after{
+    content: 'SECONDS';
+}
+
+.weather-section{
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.weather{
+    width: 90%;
+    height: 450px;
+    background: rgba(60, 63, 211, 0.17);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4.5px);
+-webkit-backdrop-filter: blur(4.5px);
+border: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    padding: 40px 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.weather-icon{
+    width: 500px;
+    position: absolute;  
+    right: 10%;  
+    top: -5%;
+    z-index: 1;
+}
+
+.weather h1{
+    font-size: 80px;   
+}
+
+.weather h2{
+    font-size: 35px;
+}
+
+.details{
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 20px;
+
+}
+
+.weather-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 10%;
+    padding-top: 40px;
+    color: #fff;
+    z-index: 2;
+}
+
+.to-do-section{
+    width: 100%;
+    min-height: 50vh;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 40%;
+    background: rgba(130, 10, 241, 0.17);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 15px;
+}
+
+.todo-app h2{
+    color: #edeef0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.todo-app img{
+    width: 50px;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 10px;
+    padding-left: 30px;
+    margin-bottom: 25px;
+}
+
+.row input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 17px;
+}
+
+.row button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.todo-app ul li{
+    list-style: none;
+    font-size: 22px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    color: #edeef0;
+}
+
+.todo-app ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    background-image: url(Media/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+.todo-app ul li.checked{
+    color: #edeef0;
+    text-decoration: line-through;
+}
+
+.todo-app ul li.checked::before{
+    background-image: url(Media/checked.png);
+}
+
+.todo-app ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #fff;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all .2s ease-in-out;
+}
+
+.todo-app ul li span:hover{
+    background: #edeef0;
+    color: #555;
+}
+
+
+.quote-section{
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    font-family: "Tagesschrift", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+.quote-box{
+  
+    background: rgba(130, 10, 241, 0.17);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.5px);
+-webkit-backdrop-filter: blur(8.5px);
+border: 1px solid rgba(255, 255, 255, 0.85);
+    color: #edeef0;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
+
+
+}
+
+.quote-box h2{
+    font-size: 32px;
+    margin-bottom: 40px;
+    position: relative;
+    background: #edeef0;
+    border-radius: 15px;
+    color: #173F5F;
+    padding: 20px 20px 20px 20px;
+}
+
+
+.quote-box blockquote{
+    font-size: 26px;
+    min-height: 110px;
+
+}
+
+.quote-box blockquote::before, .quote-box blockquote::after{
+    content: '"';
+}
+
+.quote-box span{
+    display: block;
+    margin-top: 10px;
+    float: right;
+    position: relative;
+    font-size: 18px;
+
+}
+
+.quote-box span::before{
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: -30px;
+
+}
+
+.quote-box div{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.quote-box button{
+    background: #fff;
+    color: #173F5F;
+    border-radius: 25px;
+    border: 1px solid #fff;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    font-size: 18px;
+}
+
+.quote-box button:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.quote-box button:active{
+    color: #fff;
+    background-color: #173F5F;
+}
+
+.in-view{
+ animation: fade 1s 1s both;
+}
+
+.not-in-view{
+    opacity: 0;
+}
+
+@keyframes fade{
+    0% {
+        opacity: 0;
+        transform: translate(0, 1rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
